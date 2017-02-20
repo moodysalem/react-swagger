@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <title>Swagger with React</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous"/>
+
+
+    <link rel="stylesheet"
+          href="https://cdn.rawgit.com/moodysalem/flexbox-css/e5a121cb493c0452509708a9fb0524c671f31b4e/dist/flexbox-css-min.css"
+          integrity="sha384-W3cb5bRHJiWSSwBvBHgWXGH8SdPZU6tA7DAa0S0JHJdvRlBqeKWBya2Lu9zrUMXK" crossorigin="anonymous">
+    <style>
+        html, body, #app {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Timer*/
+        .timer {
+            width: 24px;
+            height: 24px;
+            background-color: transparent;
+            box-shadow: inset 0 0 0 2px black;
+            border-radius: 50%;
+            position: relative;
+            margin: 38px auto; /* Not necessary- its only for layouting*/
+        }
+
+        .timer:after, .timer:before {
+            position: absolute;
+            content: "";
+            background-color: black;
+        }
+
+        .timer:after {
+            width: 10px;
+            height: 2px;
+            top: 11px;
+            left: 11px;
+            -webkit-transform-origin: 1px 1px;
+            -moz-transform-origin: 1px 1px;
+            transform-origin: 1px 1px;
+            -webkit-animation: minhand 2s linear infinite;
+            -moz-animation: minhand 2s linear infinite;
+            animation: minhand 2s linear infinite;
+        }
+
+        .timer:before {
+            width: 8px;
+            height: 2px;
+            top: 11px;
+            left: 11px;
+            -webkit-transform-origin: 1px 1px;
+            -moz-transform-origin: 1px 1px;
+            transform-origin: 1px 1px;
+            -webkit-animation: hrhand 8s linear infinite;
+            -moz-animation: hrhand 8s linear infinite;
+            animation: hrhand 8s linear infinite;
+        }
+
+        @-webkit-keyframes minhand {
+            0% {
+                -webkit-transform: rotate(0deg)
+            }
+            100% {
+                -webkit-transform: rotate(360deg)
+            }
+        }
+
+        @-moz-keyframes minhand {
+            0% {
+                -moz-transform: rotate(0deg)
+            }
+            100% {
+                -moz-transform: rotate(360deg)
+            }
+        }
+
+        @keyframes minhand {
+            0% {
+                transform: rotate(0deg)
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        @-webkit-keyframes hrhand {
+            0% {
+                -webkit-transform: rotate(0deg)
+            }
+            100% {
+                -webkit-transform: rotate(360deg)
+            }
+        }
+
+        @-moz-keyframes hrhand {
+            0% {
+                -moz-transform: rotate(0deg)
+            }
+            100% {
+                -moz-transform: rotate(360deg)
+            }
+        }
+
+        @keyframes hrhand {
+            0% {
+                transform: rotate(0deg)
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="display-flex align-items-center justify-content-center" style="width: 100%; height: 100%;">
+        <div>
+            <div class="timer"></div>
+            <div>Fetching swagger...</div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"
+        integrity="sha256-obZACiHd7gkOk9iIL/pimWMTJ4W/pBsKu+oZnSeBIek=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-with-addons.min.js"
+        integrity="sha256-NtwBF+7tVJHQJP21n/7wq6vbvRoVyzs+Pk0YZganCN8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js"
+        integrity="sha256-uzKwYuH50DHzDYr3h/Bnpv7C5QJNUjHEpVmT3Xuq3ww=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="287a4191637ae01d1c45.js"></script></body>
+</html>
