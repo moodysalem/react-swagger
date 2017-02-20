@@ -9,7 +9,7 @@ module.exports = {
   entry: [ 'whatwg-fetch', './src/index.jsx' ],
 
   output: {
-    path: '/dist',
+    path: 'dist',
     filename: '[hash].js'
   },
 
