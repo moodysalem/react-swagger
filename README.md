@@ -3,6 +3,7 @@ UI for swagger 2.0 built from the ground up with react
 
 # To-dos
 * Figure out what to show at index route `/`
+* Render a navigation for smaller screens
 * Render schema details
 * Show example requests
 * Handle security definitions
